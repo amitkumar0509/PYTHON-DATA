@@ -1,0 +1,68 @@
+Q1  Declare a variable called first and assign it to the value "Hello World".
+first = "Hello World
+
+Q2 = Write a comment that says "This is a comment."
+# This is a comment.
+
+Q3 = Log a message to the terminal that says "I AM A COMPUTER!"
+print("I AM A COMPUTER!")Q4 = Write an if statement that checks if 1 is less than 2 and if 4 is greater than 2. If it is, show the message "Math is fun."
+
+Q4 = Write an if statement that checks if 1 is less than 2 and if 4 is greater than 2. If it is, show the message "Math is fun."
+if 1 < 2 and 4 > 2:
+    print("Math is fun.")
+Q5 = How do you assign a variable called nope to an absence of value?
+nope = None
+
+Q6. How do you combine the language's “true” and “false” values using the “and” operator?
+true_and_false = True and False  # Result: False
+
+Q7= What’s the length of the string "What's my length?"?
+length_of_string = len("What's my length?")  # Result: 16
+
+Q8 How do you convert the string "i am shouting" to uppercase?
+shout = "i am shouting".upper()  # Result: "I AM SHOUTING"
+
+Q9 =  How do you convert the string "1000" to the number 1000?
+number = int("1000")  # Result: 1000
+
+Q10 = How do you combine the number 4 with the string "real" to get "4real"?
+combined = str(4) + "real"  # Result: "4real"
+
+Q11= What’s the result of the expression 3 * "cool"?
+repeated_string = 3 * "cool"  # Result: "coolcoolcool"
+
+Q12= What happens if you try to calculate 1 / 0
+
+try:
+    zero_division = 1 / 0
+except ZeroDivisionError:
+    zero_division = "Error: Division by zero is undefined."
+
+Q13 = What type does Python give to an empty list []?
+type_of_list = type([])  # Result <class 'list'>
+
+Q14 = How do you ask the user for their name and store it in a variable called name?
+name = input("What is your name? ")
+
+Q 15 = How do you ask the user for a number, then check if it is positive, negative, or zero?
+number = float(input("Enter a number: "))
+if number < 0:
+    print("That number is less than 0!")
+elif number > 0:
+    print("That number is greater than 0!")
+else:
+    print("You picked 0!")
+
+Q16 = How do you find the index of "l" in "apple"?
+index_of_l = "apple".index("l")  # Result: 3
+
+Q17 = How do you check whether "y" is in the string "xylophone"?
+a =  "xylophone"
+if "y" in a:
+	print(True)# Result: True
+Q18 = Check whether a string called my_string is all in lowercase.
+if my_string.islower():
+    print("The string is all lowercase.")
+else:
+    print("The string is not all lowercase.")
+
