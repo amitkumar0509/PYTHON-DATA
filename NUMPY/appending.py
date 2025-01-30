@@ -11,11 +11,6 @@ print('Array after appending : ', arr)
 
 # Appending another array at the end of 1darray
 
-
-
-
-
-
 # importing the module
 import numpy as np
  
