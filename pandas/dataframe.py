@@ -1,6 +1,6 @@
 import pandas as pd
 
-data = {
+data= {
   "calories": [420, 380, 390],
   "duration": [50, 40, 45]
 }
@@ -8,3 +8,7 @@ data = {
 myvar = pd.DataFrame(data)
 
 print(myvar)
+
+
+# locaterow
+print(myvar.loc[0])
