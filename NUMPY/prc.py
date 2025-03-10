@@ -6,4 +6,3 @@ sum_1 = sum_of_digit(a)
 sum_2= sum_of_digit(b)
 result=sum_1*sum_2
 print(result)
-    
