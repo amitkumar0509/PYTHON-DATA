@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Products - Fresh Grocery Market</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Fresh Grocery Market</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Offers</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="products">
+        <h2>Our Fresh Products</h2>
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="{% static 'images/apples.jpg' %}" alt="Apples" class="product-image">
+                <h4>Fresh Apples</h4>
+                <p>₹120 / kg</p>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="{% static 'images/tomatoes.jpg' %}" alt="Tomatoes" class="product-image">
+                <h4>Tomatoes</h4>
+                <p>₹40 / kg</p>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="{% static 'images/milk.jpg' %}" alt="Milk" class="product-image">
+                <h4>Full Cream Milk</h4>
+                <p>₹60 / liter</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Fresh Grocery Market</p>
+    </footer>
+</body>
+</html>

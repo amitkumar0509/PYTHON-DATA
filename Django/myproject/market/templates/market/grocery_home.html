@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fresh Grocery Market</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Fresh Grocery Market</h1>
+    <nav>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'products' %}">Products</a></li> <!-- ✅ This line -->
+            <li><a href="#">Offers</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    </header>
+
+    <section class="hero">
+        <h2>Fresh & Organic Groceries Delivered!</h2>
+        <p>Get your daily essentials at your doorstep. Fast, fresh and affordable.</p>
+        <button>Shop Now</button>
+    </section>
+
+    <section class="products">
+        <h3>Popular Products</h3>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="{% static 'images/apple.jpg' %}" alt="Apples" width = 200 height = 100>
+                <h4>Fresh Apples</h4>
+                <p>₹120 / kg</p>
+            </div>
+            <div class="product-card">
+                <img src="{% static 'images/tomatoes.jpg' %}" alt="Tomatoes" width = 200 height = 100>
+                <h4>Tomatoes</h4>
+                <p>₹40 / kg</p>
+            </div>
+            <div class="product-card">
+                <img src="{% static 'images/milk.jpg' %}" alt="Milk" width = 200 height = 100>
+                <h4>Full Cream Milk</h4>
+                <p>₹60 / liter</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Fresh Grocery Market | Made with ❤️ in India</p>
+    </footer>
+</body>
+</html>
