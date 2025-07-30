@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}Sign Up{% endblock %}
+{% block content %}
+<section class="auth-section" style="padding: 4rem 2rem; background-color: #fff; text-align: center;">
+    <h2 style="font-size: 2.5rem; color: #ff6f61; margin-bottom: 2rem;">Join WanderVibe</h2>
+    <div style="max-width: 400px; margin: 0 auto; background-color: #f0f4f8; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <form method="post" action="{% url 'signup' %}">
+            {% csrf_token %}
+            <div style="margin-bottom: 1rem;">
+                <label for="username" style="display: block; font-size: 1.1rem; color: #333; margin-bottom: 0.5rem;">Username</label>
+                <input type="text" id="username" name="username" required style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem;">
+            </div>
+            <div style="margin-bottom: 1rem;">
+                <label for="email" style="display: block; font-size: 1.1rem; color: #333; margin-bottom: 0.5rem;">Email</label>
+                <input type="email" id="email" name="email" required style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem;">
+            </div>
+            <div style="margin-bottom: 1rem;">
+                <label for="password1" style="display: block; font-size: 1.1rem; color: #333; margin-bottom: 0.5rem;">Password</label>
+                <input type="password" id="password1" name="password1" required style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem;">
+            </div>
+            <div style="margin-bottom: 1rem;">
+                <label for="password2" style="display: block; font-size: 1.1rem; color: #333; margin-bottom: 0.5rem;">Confirm Password</label>
+                <input type="password" id="password2" name="password2" required style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem;">
+            </div>
+            {% if form.errors %}
+                <p style="color: #d94f43; font-size: 0.9rem; margin-bottom: 1rem;">Please correct the errors below.</p>
+                {% for field in form %}
+                    {% for error in field.errors %}
+                        <p style="color: #d94f43; font-size: 0.9rem;">{{ error }}</p>
+                    {% endfor %}
+                {% endfor %}
+            {% endif %}
+            <button type="submit" class="btn" style="width: 100%;">Sign Up</button>
+        </form>
+        <p style="margin-top: 1rem; color: #666;">Already have an account? <a href="{% url 'login' %}" style="color: #ff6f61; text-decoration: none;">Login</a></p>
+    </div>
+</section>
+{% endblock %}

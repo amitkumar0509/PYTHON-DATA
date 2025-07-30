@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h2>Explore the World, One Random Adventure at a Time</h2>
+        <p>Let WanderVibe guide you to unexpected destinations and unforgettable experiences.</p>
+        <a href="#destinations" class="btn">Discover Now</a>
+    </div>
+</section>
+
+<section class="destinations" id="destinations">
+    <h2>Top Destinations</h2>
+    <div class="destination-grid">
+        {% for destination in destinations %}
+        <div class="destination-card">
+            <img src="{{ destination.image_url }}" alt="{{ destination.name }}" style="width: 100%; height: 200px; object-fit: cover;">
+            <h3>{{ destination.name }}</h3>
+            <p>{{ destination.description }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="travel-plans" id="plans">
+    <h2>Travel Plans</h2>
+    <div class="plan-grid">
+        {% for plan in plans %}
+        <div class="plan-card">
+            {% if plan.image_url %}
+            <img src="{{ plan.image_url }}" alt="{{ plan.title }}" style="width: 100%; height: 200px; object-fit: cover;">
+            {% else %}
+            <img src="https://source.unsplash.com/random/300x200/?travel" alt="{{ plan.title }}" style="width: 100%; height: 200px; object-fit: cover;">
+            {% endif %}
+            <h3>{{ plan.title }}</h3>
+            <ul>
+                {% for activity in plan.activities_list %}
+                <li>{{ activity|striptags }}</li>
+                {% endfor %}
+            </ul>
+            <a href="#" class="btn">Book Now</a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

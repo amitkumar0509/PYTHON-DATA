@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'market',  # Custom app for grocery management
+     # Custom app for grocery management
+     # Django REST Framework for API development]
 ]
 
 MIDDLEWARE = [
